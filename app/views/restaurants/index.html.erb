@@ -1,0 +1,6 @@
+<h1>Restaurants</h1>
+<% @restaurants.each do |restaurant| %>
+  <p><%= restaurant.name %></p>
+  <%= link_to 'Delete', restaurant_path(restaurant),
+  data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}  %>
+<% end %>
